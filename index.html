@@ -270,15 +270,6 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .ba-split img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .case .ba-split,.case:hover .ba-split{transform:none}
 
-.how{background:var(--ink);color:#fff}
-.how .h-sec{color:#fff}
-.how .lead{color:var(--on-ink-muted)}
-.how-grid{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:48px;counter-reset:how}
-.how-grid li{counter-increment:how;background:var(--ink-1);border:1px solid rgba(255,255,255,.09);border-radius:var(--r);padding:26px 22px}
-.how-grid li::before{content:"0" counter(how);display:block;font-family:var(--display);font-weight:800;font-size:2rem;line-height:1;color:var(--brand);margin-bottom:14px}
-.how-grid h3{font-size:1.12rem;font-weight:700;line-height:1.2;margin-bottom:8px;color:#fff}
-.how-grid p{color:var(--on-ink-muted);font-size:.93rem}
-
 .vids{background:var(--paper-2)}
 .vid-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:48px auto 0;max-width:980px}
 .vid{position:relative;display:block;width:100%;aspect-ratio:16/9;border:0;padding:0;border-radius:var(--r);overflow:hidden;background:var(--ink-1);cursor:pointer;box-shadow:var(--sh-lg);font:inherit}
@@ -293,9 +284,8 @@ header.nav{position:sticky;top:0;z-index:60;background:var(--ink);border-bottom:
 .vid.playing{cursor:default}
 .vid.playing::after,.vid.playing .vid-play,.vid.playing .vid-cap,.vid.playing img{display:none}
 .vid.playing iframe{z-index:3}
-@media(max-width:960px){.how-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.how-grid{gap:10px;margin-top:34px}.how-grid li{padding:20px 16px}.vid-grid{grid-template-columns:1fr;gap:12px;margin-top:34px}}
-@media(max-width:420px){.how-grid{grid-template-columns:1fr}}
+@media(max-width:600px){.vid-grid{grid-template-columns:1fr;gap:12px;margin-top:34px}}
+
 .ba-cases{display:flex;flex-direction:column;gap:74px;margin-top:60px}
 .case{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
 .case-media{display:flex;justify-content:flex-start}
@@ -722,22 +712,6 @@ footer h4{font-family:var(--display);font-weight:700;color:var(--brand-lt);font-
       </article>
     </div>
     <div class="see-all"><a class="btn btn-outline" href="services/" data-soon="The full services page comes with the full website build.">See All Services <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
-  </div>
-</section>
-
-<section class="how pad" id="how">
-  <div class="wrap center">
-    <span class="eyebrow on-dark">How It Works</span>
-    <h2 class="h-sec">How a Gutter Clear Works</h2>
-    <p class="lead">Every gutter clear follows the same four steps, for a fixed price.</p>
-  </div>
-  <div class="wrap">
-    <ol class="how-grid">
-      <li><h3>Cleared by Vacuum</h3><p>Safe ladder access and a high-powered wet and dry vacuum system clear the full run, with no mess and no fuss.</p></li>
-      <li><h3>Downpipes and Hoppers Too</h3><p>The full system is cleaned, including the downpipes and hoppers, at no extra cost.</p></li>
-      <li><h3>Waste Taken Away</h3><p>Everything is collected in the vacuum and disposed of off site, at no extra cost.</p></li>
-      <li><h3>Flow Test and Photographs</h3><p>A flow test checks the guttering drains properly and no longer leaks, and you get before and after images.</p></li>
-    </ol>
   </div>
 </section>
 
@@ -1227,7 +1201,7 @@ a.cm-chip:hover{border-color:var(--card-line-hi);transform:translateY(-2px)}
     var GROUPS = [
       ".pad > .wrap.center",
       ".svc-grid > .svc-photo", ".see-all",
-      ".ba-cases > .case", ".how-grid > li", ".vid-grid > .vid",
+      ".ba-cases > .case", ".vid-grid > .vid",
       ".gal-grid > .gal-item",
       ".why-photo", ".why-list > li",
       ".rev-score", ".rev-view", ".rev-ctrls",
